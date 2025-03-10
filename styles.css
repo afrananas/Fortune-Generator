@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #bdb9b9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.fortune-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#fortune-box {
+    border: 2px solid #333;
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+#fortune-text {
+    font-size: 18px;
+    color: #333;
+}
+
+.controls {
+    margin-top: 10px;
+}
+
+button {
+    margin: 5px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+button:hover { 
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); 
+}
+
+button:active {
+    transform: translateY(0); 
+    box-shadow: 0 4px 6px rgba(244, 171, 171, 0.1); 
+}
+
+#color-font {
+    background-color: #0c4a3e; 
+}
+
+#color-font:hover {
+    background-color: #408678; 
+}
+
+#color-border {
+    background-color: #3f6905; 
+}
+
+#color-border:hover {
+    background-color: #5fb007; 
+}
+#color-bg {
+    background-color: #4750ce; 
+}
+
+#color-bg:hover {
+    background-color: #6262a1; 
+}
+
+#font-style {
+    background-color: #d39726; 
+}
+
+#font-style:hover {
+    background-color: #e6b85e; 
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
