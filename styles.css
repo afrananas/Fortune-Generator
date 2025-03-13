@@ -1,98 +1,61 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #bdb9b9;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-}
-
-.fortune-container {
-    text-align: center;
-    margin-bottom: 20px;
+    min-height: 100vh;
 }
 
 #fortune-box {
-    border: 2px solid #333;
+    width: 60%;
     padding: 20px;
+    border: 2px solid #333;
     background-color: #fff;
-    margin-bottom: 10px;
-    width: 300px;
-    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#fortune-text {
-    font-size: 18px;
-    color: #333;
+#buttons-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
 }
 
-.controls {
-    margin-top: 10px;
-}
-
-button {
-    margin: 5px;
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: 500;
+.color-button {
+    padding: 10px 20px;
     border: none;
-    border-radius: 8px;
-    color: white;
+    border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    font-size: 16px;
+    color: #fff;
 }
 
-button:hover { 
-    transform: translateY(-2px); 
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); 
+#button-1 {
+    background-color: #FF5733; 
+}
+#button-2 {
+    background-color: #33FF57; 
 }
 
-button:active {
-    transform: translateY(0); 
-    box-shadow: 0 4px 6px rgba(244, 171, 171, 0.1); 
+#button-3 {
+    background-color: #3357FF; 
 }
 
-#color-font {
-    background-color: #0c4a3e; 
-}
-
-#color-font:hover {
-    background-color: #408678; 
-}
-
-#color-border {
-    background-color: #3f6905; 
-}
-
-#color-border:hover {
-    background-color: #5fb007; 
-}
-#color-bg {
-    background-color: #4750ce; 
-}
-
-#color-bg:hover {
-    background-color: #6262a1; 
-}
-
-#font-style {
-    background-color: #d39726; 
-}
-
-#font-style:hover {
-    background-color: #e6b85e; 
+#button-4 {
+    background-color: #FF33A1; 
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    margin-top: auto;
+    padding: 10px;
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    width: 100%;
 }

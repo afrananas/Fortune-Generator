@@ -12,11 +12,10 @@ const fortunes = [
     "The only way to do great work is to love what you do."
 ];
 
+
 const fortuneText = document.getElementById('fortune-text');
-const colorFontBtn = document.getElementById('color-font');
-const colorBgBtn = document.getElementById('color-bg');
-const colorBorderBtn = document.getElementById('color-border');
-const fontStyleBtn = document.getElementById('font-style');
+const fortuneBox = document.getElementById('fortune-box');
+const buttons = document.querySelectorAll('.color-button');
 
 
 function generateFortune() {
@@ -24,37 +23,48 @@ function generateFortune() {
     fortuneText.textContent = fortunes[randomIndex];
 }
 
+function applyStyles(button) {
+    const color = window.getComputedStyle(button).backgroundColor; 
 
-function changeFontColor() {
-    const colors = ['#FF5733', '#33FF57', '#3357FF', '#FF33A1'];
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    fortuneText.style.color = randomColor;
+    fortuneBox.style.backgroundColor = color;
+    fortuneBox.style.borderColor = color;
+
+
+    fortuneText.style.color = getContrastColor(color);
+
+
+    fortuneText.style.fontFamily = getRandomFont();
+    fortuneText.style.fontSize = getRandomFontSize();
 }
 
-function changeBgColor() {
-    const colors = ['#FFC300', '#DAF7A6', '#C70039', '#900C3F'];
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    document.getElementById('fortune-box').style.backgroundColor = randomColor;
-}
 
-function changeBorderColor() {
-    const colors = ['#581845', '#FF5733', '#33FF57', '#3357FF'];
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    document.getElementById('fortune-box').style.borderColor = randomColor;
-}
-
-function changeFontStyle() {
+function getRandomFont() {
     const fonts = ['Arial', 'Georgia', 'Courier New', 'Verdana'];
-    const randomFont = fonts[Math.floor(Math.random() * fonts.length)];
-    fortuneText.style.fontFamily = randomFont;
-    fortuneText.style.fontSize = `${Math.floor(Math.random() * 10) + 18}px`;
+    return fonts[Math.floor(Math.random() * fonts.length)];
 }
 
 
-colorFontBtn.addEventListener('click', changeFontColor);
-colorBgBtn.addEventListener('click', changeBgColor);
-colorBorderBtn.addEventListener('click', changeBorderColor);
-fontStyleBtn.addEventListener('click', changeFontStyle);
+function getRandomFontSize() {
+    return `${Math.floor(Math.random() * 10) + 18}px`;
+}
 
 
-window.onload = generateFortune;
+function getContrastColor(backgroundColor) {
+
+    
+    if (fortuneBox.style.backgroundColor == '#white') {
+        return '#000000';
+    }
+    else{
+        return '#FFFFFF';
+    }
+
+    
+}
+
+buttons.forEach(button => {
+    button.addEventListener('click', () => applyStyles(button));
+});
+
+
+window.onload = generateFortune;ff
